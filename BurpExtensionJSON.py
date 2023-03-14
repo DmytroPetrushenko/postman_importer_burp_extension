@@ -157,32 +157,30 @@ class BurpExtender(IBurpExtender, ITab, IExtensionStateListener):
         layout = swing.GroupLayout(self.tab)
         self.tab.setLayout(layout)
 
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                      .addGap(15)
-                      .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(self.titleLabel)
-                                .addComponent(self.infoLabel1)
-                                .addComponent(self.infoLabel2)
-                                .addComponent(self.parseFileButton)
-                                .addComponent(self.addButton)
-                                .addComponent(self.infoLabelEndpoint)
-                                .addComponent(self.infoEndpointKeyField)
-                                .addComponent(self.endpointKeyField, swing.GroupLayout.PREFERRED_SIZE, 400,
-                                              swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(self.infoEndpointValueField)
-                                .addComponent(self.endpointValueField, swing.GroupLayout.PREFERRED_SIZE, 400,
-                                              swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(self.addVariableButton)
-                                .addComponent(self.urlListPane, swing.GroupLayout.PREFERRED_SIZE, 400,
-                                              swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(self.clearButton)
-                                .addComponent(self.removeButton)
-                                .addComponent(self.infoLabel3)
-                                .addComponent(self.logLabel)
-                                .addComponent(self.logPane, swing.GroupLayout.PREFERRED_SIZE, 825,
-                                              swing.GroupLayout.PREFERRED_SIZE)))
+        layout.setHorizontalGroup(layout.createSequentialGroup()
+            .addGroup(layout.createParallelGroup()
+                    .addGap(15)
+                    .addComponent(self.titleLabel)
+                    .addComponent(self.infoLabel1)
+                    .addComponent(self.infoLabel2)
+                    .addComponent(self.parseFileButton)
+                    .addComponent(self.addButton)
+                    .addComponent(self.infoLabelEndpoint)
+                    .addComponent(self.infoEndpointKeyField)
+                    .addComponent(self.endpointKeyField, swing.GroupLayout.PREFERRED_SIZE, 400,
+                                  swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(self.infoEndpointValueField)
+                    .addComponent(self.endpointValueField, swing.GroupLayout.PREFERRED_SIZE, 400,
+                                  swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(self.addVariableButton)
+                    .addComponent(self.urlListPane, swing.GroupLayout.PREFERRED_SIZE, 400,
+                                  swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(self.clearButton)
+                    .addComponent(self.removeButton)
+                    .addComponent(self.infoLabel3)
+                    .addComponent(self.logLabel)
+                    .addComponent(self.logPane, swing.GroupLayout.PREFERRED_SIZE, 825,
+                                  swing.GroupLayout.PREFERRED_SIZE))
             .addGap(30)
             .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.LEADING)
                       .addGap(15)
@@ -196,8 +194,7 @@ class BurpExtender(IBurpExtender, ITab, IExtensionStateListener):
                       )
         )
 
-        layout.setVerticalGroup(
-            layout.createParallelGroup(swing.GroupLayout.Alignment.LEADING)
+        layout.setVerticalGroup(layout.createParallelGroup()
             .addGroup(layout.createSequentialGroup()
                       .addGap(15)
                       .addComponent(self.titleLabel)
